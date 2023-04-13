@@ -6,10 +6,17 @@ body {
   line-height: 1.4;
   color: #333;
   /* 위 속성들은 모두 상속되기에 전체 스타일을 한번에 제어 */
+  
+  height: 3000px;
 }
 
 a {
   text-decoration: none;
+}
+
+img {
+  /* 이미지가 인라인 요소라서 발생하는 문자 기준선(baseline) 아래의 공간을 제거하기 위해 요소를 블록요소로 바꿔줘야함 */
+  display: block;
 }
 
 .inner {
@@ -26,6 +33,12 @@ header {
   /* background-color: rgb(116, 139, 207); */
   background-color: #f6f5f0;
   border-bottom: 1px solid #c8c8c8;
+
+  /* 고정된 헤더 만들기 */
+  width: 100%;
+  position: fixed; /* 가로 너비를 지정하지 않으면 최소한으로 줄어드려고 함 */
+  top: 0;
+  z-index: 9;
 }
 header > .inner{
   height: 120px;
@@ -143,7 +156,7 @@ header .main-menu .item .item__contents {
   width: 100%;
   position: fixed;
   left: 0;
-  /* display: none; */
+  display: none; 
 }
 header .main-menu .item:hover .item__contents {
   display: block;
@@ -184,7 +197,18 @@ header .main-menu .item .item__contents .contents__texture p {
   margin: 4px 0 14px;
 }
 
-
-
+header .badges {
+  position: absolute;
+  top: 132px;
+  right: 12px;
+}
+header .badges .badge {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  /* box-shadow: 순서대로 x축거리, y축거리, 흐림처리(blur)범위, 확대축소(spread)범위, 색상 */
+  box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
 
 
