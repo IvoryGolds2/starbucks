@@ -94,7 +94,7 @@ new Swiper('.promotion .swiper', {
 });//수직 슬라이드는 꼭 높이를 지정하지 않으면 매우 곤란
 
 // 프로모션 섹션 토글 기능
-const promotionEl = document.querySelector('.promotion');
+const promotionEl = document.querySelector('section.promotion');
 const promotionToggleBtn = document.querySelector('.toggle-promotion');
 const promotionToggleIcon = promotionToggleBtn.querySelector('.material-icons');
 
@@ -105,13 +105,13 @@ const promotionToggleIcon = promotionToggleBtn.querySelector('.material-icons');
 // 그렇지 않으면 숨김 처리!
 // ('hide' 클래스를 추가하고 아이콘 모양을 '다운로드'로 설정)
 // 
-promotionToggleBtn.addEventListener('click', function() {
+promotionToggleBtn.addEventListener('click', function () {
   if (promotionEl.classList.contains('hide')) {
     promotionEl.classList.remove('hide');
-    promotionToggleIcon.testcontent = 'upload';
+    promotionToggleIcon.textContent = 'upload';
   } else {
     promotionEl.classList.add('hide');
-    promotionToggleIcon.textContent = 'download'
+    promotionToggleIcon.textContent = 'download';
   }
 });
 

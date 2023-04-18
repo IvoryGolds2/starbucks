@@ -393,11 +393,11 @@ header .badges .badge {
   justify-content: flex-end;
   align-items: center;
 }
-.notice .inner__right .h2 {
+.notice .inner__right h2 {
   font-size: 17px;
   font-weight: 700;
 }
-.notice .inner__right .toggle-promotion{
+.notice .inner__right .toggle-promotion {
   width: 62px;
   height: 62px;
   display: flex;
@@ -405,7 +405,7 @@ header .badges .badge {
   align-items: center;
   cursor: pointer;
 }
-.notice .inner__right .toggle-promotion .material-icons{
+.notice .inner__right .toggle-promotion .material-icons {
   font-size: 30px;
 }
 
